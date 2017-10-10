@@ -12,5 +12,5 @@ import dagger.Component
 
 @Component(modules = arrayOf(Example3PresenterModule::class))
 interface Example3PresenterComponent {
-    fun inject(activity: Example3Activity)
+    fun inject2(activity: Example3Activity)
 }

@@ -11,7 +11,7 @@ import javax.inject.Inject
 
 /**
  *
- * CreateTime: 17/10/10  16:49
+     * CreateTime: 17/10/10  16:49
  * @author 郑炯
  */
 class Example3Activity : AppCompatActivity() {
@@ -29,6 +29,7 @@ class Example3Activity : AppCompatActivity() {
                 .build()
 
         component.inject(this)
+
 
         presenter.sayHello()
     }
