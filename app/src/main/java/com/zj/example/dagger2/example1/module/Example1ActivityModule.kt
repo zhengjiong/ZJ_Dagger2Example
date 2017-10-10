@@ -1,7 +1,7 @@
 package com.zj.example.dagger2.example1.module
 
-import com.zj.example.dagger2.example1.DaggerActivity
-import com.zj.example.dagger2.example1.bean.DaggerPresenter
+import com.zj.example.dagger2.example1.Example1Activity
+import com.zj.example.dagger2.example1.bean.Example1Presenter
 import com.zj.example.dagger2.example1.bean.User
 import dagger.Module
 import dagger.Provides
@@ -24,13 +24,13 @@ import dagger.Provides
  */
 
 @Module
-class ActivityModule(val activity: DaggerActivity) {
+class Example1ActivityModule(val activity: Example1Activity) {
 
     /**
      * 方法名字可以随便取
      */
     @Provides
-    fun provideActivity(): DaggerActivity = activity
+    fun provideActivity(): Example1Activity = activity
 
     /**
      * 方法名字可以随便取
@@ -52,5 +52,5 @@ class ActivityModule(val activity: DaggerActivity) {
      * 如果没有声明这两个函数的话，可能编译期间会报错哟。
      */
     @Provides
-    fun provideDaggerPresenter(activity: DaggerActivity, user: User): DaggerPresenter = DaggerPresenter(activity, user)
+    fun provideDaggerPresenter(activity: Example1Activity, user: User): Example1Presenter = Example1Presenter(activity, user)
 }

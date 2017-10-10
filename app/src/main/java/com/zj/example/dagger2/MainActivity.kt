@@ -11,8 +11,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import com.zj.example.dagger2.example1.DaggerActivity
-import com.zj.example.dagger2.example2.OkHttpActivity
+import com.zj.example.dagger2.example1.Example1Activity
+import com.zj.example.dagger2.example2.Example2Activity
 import com.zj.example.dagger2.example3.Example3Activity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -31,9 +31,9 @@ class MainActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         recyclerView.adapter = Adapter(this, listOf(
-                Item("example1", DaggerActivity::class.java),
-                Item("example2", OkHttpActivity::class.java),
-                Item("example3", Example3Activity::class.java)
+                Item("example1-简单注入", Example1Activity::class.java),
+                Item("example2-如何实例化一个Component", Example2Activity::class.java),
+                Item("example3-component依赖另一个component", Example3Activity::class.java)
         ))
     }
 

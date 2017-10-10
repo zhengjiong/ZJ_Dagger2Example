@@ -1,9 +1,8 @@
 package com.zj.example.dagger2.example1.component
 
-import com.zj.example.dagger2.example1.DaggerActivity
-import com.zj.example.dagger2.example1.bean.DaggerPresenter
+import com.zj.example.dagger2.example1.Example1Activity
 import com.zj.example.dagger2.example1.bean.User
-import com.zj.example.dagger2.example1.module.ActivityModule
+import com.zj.example.dagger2.example1.module.Example1ActivityModule
 import dagger.Component
 
 /**
@@ -17,8 +16,8 @@ import dagger.Component
  * @author 郑炯
  */
 
-@Component(modules = arrayOf(ActivityModule::class))
-interface ActivityComponent {
-    fun inject(activity: DaggerActivity)
+@Component(modules = arrayOf(Example1ActivityModule::class))
+interface Example1ActivityComponent {
+    fun inject(activity: Example1Activity)
     fun getUser(): User
 }

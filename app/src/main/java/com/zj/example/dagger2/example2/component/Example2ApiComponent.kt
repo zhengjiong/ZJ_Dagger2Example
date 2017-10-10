@@ -13,6 +13,6 @@ import javax.inject.Singleton
 
 @Singleton
 @Component(modules = arrayOf(ApiModule::class))
-interface ApiComponent {
+interface Example2ApiComponent {
     fun getRetrofit(): Retrofit
 }
