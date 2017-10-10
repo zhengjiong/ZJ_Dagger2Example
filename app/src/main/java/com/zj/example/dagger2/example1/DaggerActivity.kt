@@ -6,7 +6,7 @@ import com.zj.example.dagger2.R
 import com.zj.example.dagger2.example1.bean.DaggerPresenter
 import com.zj.example.dagger2.example1.component.DaggerActivityComponent
 import com.zj.example.dagger2.example1.module.ActivityModule
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_example1.*
 import javax.inject.Inject
 
 /**
@@ -21,7 +21,7 @@ class DaggerActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_example1)
 
 
         /**
