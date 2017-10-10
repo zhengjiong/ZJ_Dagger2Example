@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.zj.example.dagger2.R
 import com.zj.example.dagger2.example1.bean.DaggerPresenter
+import com.zj.example.dagger2.example1.component.ActivityComponent
 import com.zj.example.dagger2.example1.component.DaggerActivityComponent
 import com.zj.example.dagger2.example1.module.ActivityModule
 import kotlinx.android.synthetic.main.activity_example1.*
@@ -36,10 +37,12 @@ class DaggerActivity : AppCompatActivity() {
          * 好了，到此为止，我们已经使用Dagger2形成了关联，我们还需要注入Presenter。在Activity中：@Inject DaggerPresenter presenter;
          */
         //注入DaggerPresenter
-        DaggerActivityComponent.builder()
+        var activityComponent = DaggerActivityComponent.builder()
                 .activityModule(ActivityModule(this))
                 .build()
-                .inject(this)
+
+        activityComponent.getUser()
+        activityComponent.inject(this)
 
         presenter.showUsername()
     }

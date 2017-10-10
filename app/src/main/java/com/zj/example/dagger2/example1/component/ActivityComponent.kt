@@ -1,6 +1,8 @@
 package com.zj.example.dagger2.example1.component
 
 import com.zj.example.dagger2.example1.DaggerActivity
+import com.zj.example.dagger2.example1.bean.DaggerPresenter
+import com.zj.example.dagger2.example1.bean.User
 import com.zj.example.dagger2.example1.module.ActivityModule
 import dagger.Component
 
@@ -18,4 +20,5 @@ import dagger.Component
 @Component(modules = arrayOf(ActivityModule::class))
 interface ActivityComponent {
     fun inject(activity: DaggerActivity)
+    fun getUser(): User
 }

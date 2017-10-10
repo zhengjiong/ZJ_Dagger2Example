@@ -1,5 +1,8 @@
 package com.zj.example.dagger2.example3.module
 
+import com.zj.example.dagger2.MainActivity
+import com.zj.example.dagger2.example3.Example3Activity
+import com.zj.example.dagger2.example3.bean.Dog
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
@@ -13,7 +16,15 @@ import java.util.concurrent.TimeUnit
  */
 
 @Module
-class Example3OkHttpModule {
+class Example3OkHttpModule(val activity: Example3Activity) {
+
+    @Provides
+    fun provideDog(): Dog = Dog("金金")
+
+    @Provides
+    fun provideActivity(): Example3Activity {
+        return activity
+    }
 
     @Provides
     fun provideOkHttpClient(): OkHttpClient {
