@@ -33,7 +33,8 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = Adapter(this, listOf(
                 Item("example1-简单注入", Example1Activity::class.java),
                 Item("example2-如何实例化一个Component", Example2Activity::class.java),
-                Item("example3-component依赖另一个component", Example3Activity::class.java)
+                Item("example3-component依赖另一个component", Example3Activity::class.java),
+                Item("example43-构造函数的参数也注入", Example4Activity::class.java)
         ))
     }
 
