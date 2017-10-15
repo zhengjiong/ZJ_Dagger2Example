@@ -14,10 +14,19 @@ import android.widget.TextView
 import com.zj.example.dagger2.example1.Example1Activity
 import com.zj.example.dagger2.example2.Example2Activity
 import com.zj.example.dagger2.example3.Example3Activity
+import com.zj.example.dagger2.example4.Example4Activity
+import com.zj.example.dagger2.example5.Example5Activity
 import kotlinx.android.synthetic.main.activity_main.*
 
 /**
- *
+ *  步骤1：查找Module中是否存在创建该类的方法。
+ *  步骤2：若存在创建类方法，查看该方法是否存在参数
+ *      步骤2.1：若存在参数，则按从**步骤1**开始依次初始化每个参数
+步骤2.2：若不存在参数，则直接初始化该类实例，一次依赖注入到此结束
+ *  步骤3：若不存在创建类方法，则查找Inject注解的构造函数，
+ *  看构造函数是否存在参数
+ *      步骤3.1：若存在参数，则从**步骤1**开始依次初始化每个参数
+ *      步骤3.2：若不存在参数，则直接初始化该类实例，一次依赖注入到此结束
  * CreateTime: 17/10/10  16:01
  * @author 郑炯
  */
@@ -34,7 +43,8 @@ class MainActivity : AppCompatActivity() {
                 Item("example1-简单注入", Example1Activity::class.java),
                 Item("example2-如何实例化一个Component", Example2Activity::class.java),
                 Item("example3-component依赖另一个component", Example3Activity::class.java),
-                Item("example43-构造函数的参数也注入", Example4Activity::class.java)
+                Item("example4-构造函数的参数也注入", Example4Activity::class.java),
+                Item("example5-综合练习", Example5Activity::class.java)
         ))
     }
 
