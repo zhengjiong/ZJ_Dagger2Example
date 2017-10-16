@@ -15,16 +15,16 @@ import javax.inject.Singleton
 @Module
 class AppModule(val context: Context) {
 
-    @Singleton
+    //@Singleton
     @Provides
     fun provideContext() = context
 
 
-    @Singleton
+    //@Singleton
     @Provides
     fun provideNavigator() = Navigator()
 
-    @Singleton
+    //@Singleton
     @Provides
     fun provideToastUtil() = ToastUtil(context)
 }

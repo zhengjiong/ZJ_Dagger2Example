@@ -10,7 +10,7 @@ import dagger.Component
  * Created by zhengjiong
  * date: 2017/10/15 21:46
  */
-@PerActivity
+//@PerActivity
 @Component(modules = arrayOf(ActivityModule::class))
 interface ActivityComponent {
     //fun getActivity(): Activity//ActivityModule中已经提供了,这里可以不用加, 如果ActivityComponent作为dependencies才需要加

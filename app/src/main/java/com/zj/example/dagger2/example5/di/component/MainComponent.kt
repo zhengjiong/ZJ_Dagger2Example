@@ -9,9 +9,9 @@ import dagger.Component
 /**
  *
  * CreateTime: 17/10/16  11:19
- * @author 郑炯
+ * @author zhengjiong
  */
-@PerActivity
+//@PerActivity
 @Component(dependencies = arrayOf(AppComponent::class), modules = arrayOf(ActivityModule::class))
 interface MainComponent {
     fun inject(activityExample5: Example5Activity)

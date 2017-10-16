@@ -7,12 +7,9 @@ import javax.inject.Inject
  * date: 2017/10/15 16:47
  */
 
-class User @Inject constructor() {
-    lateinit var username: String
-
-    fun getUser(): User {
-        var user = User()
-        user.username = "zhengjiong"
+class User constructor(val username:String) {
+    /*fun getUser(): User {
+        var user = User("zhengjiong)
         return user
-    }
+    }*/
 }

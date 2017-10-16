@@ -17,7 +17,7 @@ import javax.inject.Singleton
  * 但是AppModule中的方法如果加了@Singletion,这里的AppComponent不加@Singleton的话,
  * 编译就会报错
  */
-@Singleton
+//@Singleton
 @Component(modules = arrayOf(AppModule::class))
 interface AppComponent {
     fun getContext(): Context

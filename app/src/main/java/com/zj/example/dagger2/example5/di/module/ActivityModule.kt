@@ -1,6 +1,7 @@
 package com.zj.example.dagger2.example5.di.module
 
 import android.app.Activity
+import com.zj.example.dagger2.example5.bean.MultiConstruct
 import com.zj.example.dagger2.example5.scopes.PerActivity
 import dagger.Module
 import dagger.Provides
@@ -13,11 +14,20 @@ import dagger.Provides
 @Module
 class ActivityModule(val activity: Activity) {
 
-    @PerActivity
+    //@PerActivity
     @Provides
     fun provideActivity() = activity
 
-    /*@PerActivity
+    //@PerActivity
     @Provides
-    fun provideInt():Int = 1*/
+    fun provideInt():Int = 1
+
+    //@PerActivity
+    @Provides
+    fun provideString(): String = "zhengjiong1"
+
+    //@PerActivity
+    @Provides
+    fun provideMultiConstruct(): MultiConstruct = MultiConstruct("zhengjiong2")
+
 }

@@ -16,7 +16,7 @@ import javax.inject.Inject
 /**
  *
  * CreateTime: 17/10/16  09:52
- * @author 郑炯
+ * @author zhengjiong
  */
 
 
@@ -41,7 +41,7 @@ class Example5Fragment : Fragment() {
         val view = inflater!!.inflate(R.layout.fragment_example5_layout, container, false)
         var btnShowToast = view.findViewById<View>(R.id.btnShowToast)
         btnShowToast.setOnClickListener {
-            toastUtil.showToast("点击了btnShowToast")
+            toastUtil.showToast(multiConstruct.toString())
         }
         return view
     }
