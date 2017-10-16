@@ -16,4 +16,8 @@ class ActivityModule(val activity: Activity) {
     @PerActivity
     @Provides
     fun provideActivity() = activity
+
+    /*@PerActivity
+    @Provides
+    fun provideInt():Int = 1*/
 }

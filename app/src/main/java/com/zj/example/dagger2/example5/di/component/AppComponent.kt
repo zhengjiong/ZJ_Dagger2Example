@@ -2,6 +2,7 @@ package com.zj.example.dagger2.example5.di.component
 
 import android.content.Context
 import com.zj.example.dagger2.example5.Navigator
+import com.zj.example.dagger2.example5.ToastUtil
 import com.zj.example.dagger2.example5.di.module.AppModule
 import dagger.Component
 import javax.inject.Singleton
@@ -21,4 +22,5 @@ import javax.inject.Singleton
 interface AppComponent {
     fun getContext(): Context
     fun getNavigator(): Navigator
+    fun getToastUtil(): ToastUtil
 }

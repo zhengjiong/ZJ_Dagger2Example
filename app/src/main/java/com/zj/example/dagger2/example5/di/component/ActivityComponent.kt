@@ -13,6 +13,6 @@ import dagger.Component
 @PerActivity
 @Component(modules = arrayOf(ActivityModule::class))
 interface ActivityComponent {
-    fun getActivity(): Activity
+    //fun getActivity(): Activity//ActivityModule中已经提供了,这里可以不用加, 如果ActivityComponent作为dependencies才需要加
     fun inject(activity: Example5Activity)
 }
