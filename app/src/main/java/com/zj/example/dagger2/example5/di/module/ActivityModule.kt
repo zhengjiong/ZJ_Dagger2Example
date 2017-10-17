@@ -26,6 +26,9 @@ class ActivityModule(val activity: Activity) {
     @Provides
     fun provideString(): String = "zhengjiong1"
 
+    /*@Provides
+    fun provideX():Long = 1*/
+
     //@PerActivity
     @Provides
     fun provideMultiConstruct(): MultiConstruct = MultiConstruct("zhengjiong2")

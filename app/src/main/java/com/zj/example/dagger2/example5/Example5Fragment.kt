@@ -8,9 +8,11 @@ import android.view.ViewGroup
 import com.zj.example.dagger2.App
 import com.zj.example.dagger2.R
 import com.zj.example.dagger2.example5.bean.MultiConstruct
+import com.zj.example.dagger2.example5.contract.Example5Contract
 import com.zj.example.dagger2.example5.di.component.DaggerMainComponent
 import com.zj.example.dagger2.example5.di.component.MainFragmentComponent
 import com.zj.example.dagger2.example5.di.module.ActivityModule
+import kotlinx.android.synthetic.main.fragment_example5_layout.*
 import javax.inject.Inject
 
 /**
@@ -20,13 +22,16 @@ import javax.inject.Inject
  */
 
 
-class Example5Fragment : Fragment() {
+class Example5Fragment : Fragment(), Example5Contract.View {
 
     @Inject
     lateinit var toastUtil: ToastUtil
 
     @Inject
     lateinit var multiConstruct: MultiConstruct
+
+    @Inject
+    lateinit var presenter: Example5Presenter
 
     lateinit var mainFragmentComponent: MainFragmentComponent
 
@@ -37,30 +42,43 @@ class Example5Fragment : Fragment() {
         }
     }
 
+    override fun setUsername(username: String) {
+        tvInfo.text = username
+    }
+
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater!!.inflate(R.layout.fragment_example5_layout, container, false)
         var btnShowToast = view.findViewById<View>(R.id.btnShowToast)
         btnShowToast.setOnClickListener {
             toastUtil.showToast(multiConstruct.toString())
         }
+        val btnGetUser = view.findViewById<View>(R.id.btnGetUser)
+        btnGetUser.setOnClickListener {
+            presenter.loadData()
+        }
+
         return view
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        /**
+         * 这里使用DaggerMainComponent也可以注入ToastUtil和MultiConstruct,
+         * 但是我们不这样做,  我们使用MainFragmentComponent来注入
+         */
+        /*DaggerMainComponent.builder()
+                .appComponent(App.app.mAppComponent)
+                .activityModule(ActivityModule(activity))
+                .build()
+                .inject(this)*/
 
-        //mainFragmentComponent = (activity as Example5Activity).mainComponent.plusMainFragmentComponent()
+        mainFragmentComponent = (activity as Example5Activity).mainComponent.plusMainFragmentComponent()
 
         /**
          * 注入toastUtil
          */
-        //mainFragmentComponent.inject(this)
+        mainFragmentComponent.inject(this)
 
 
-        DaggerMainComponent.builder()
-                .appComponent(App.app.mAppComponent)
-                .activityModule(ActivityModule(activity))
-                .build()
-                .inject(this)
     }
 }

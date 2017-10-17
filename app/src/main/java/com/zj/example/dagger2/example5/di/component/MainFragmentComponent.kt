@@ -1,6 +1,8 @@
 package com.zj.example.dagger2.example5.di.component
 
 import com.zj.example.dagger2.example5.Example5Fragment
+import com.zj.example.dagger2.example5.contract.Example5Contract
+import com.zj.example.dagger2.example5.di.module.MainFragmentModule
 import dagger.Subcomponent
 
 /**
@@ -10,7 +12,7 @@ import dagger.Subcomponent
  */
 
 //@PerActivity 加了会编译不通过
-@Subcomponent
+@Subcomponent(modules = arrayOf(MainFragmentModule::class))
 interface MainFragmentComponent {
     fun inject(example5Fragment: Example5Fragment)
 }

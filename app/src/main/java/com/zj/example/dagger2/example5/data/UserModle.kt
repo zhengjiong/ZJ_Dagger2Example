@@ -7,7 +7,7 @@ import javax.inject.Inject
  * Created by zhengjiong
  * date: 2017/10/15 21:11
  */
-class GetUserData @Inject constructor() {
+class UserModle @Inject constructor() {
 
     fun getUser(): User {
         return User("zhengjiong")

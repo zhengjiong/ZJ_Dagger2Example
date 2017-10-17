@@ -46,12 +46,13 @@ class Example5Activity : AppCompatActivity() {
                 .appComponent(App.app.mAppComponent)
                 .activityModule(ActivityModule(this))
                 .build()
+        mainComponent.inject(this)
 
         supportFragmentManager.beginTransaction()
                 .replace(R.id.frame_holder, Example5Fragment.newInstance(), "Example5Fragment")
                 .commitAllowingStateLoss()
 
-
-
     }
+
+    fun getComponent(): MainComponent = mainComponent
 }
