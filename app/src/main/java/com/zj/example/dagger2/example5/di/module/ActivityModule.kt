@@ -1,8 +1,8 @@
 package com.zj.example.dagger2.example5.di.module
 
 import android.app.Activity
+import com.zj.example.dagger2.example5.Example5Activity
 import com.zj.example.dagger2.example5.bean.MultiConstruct
-import com.zj.example.dagger2.example5.scopes.PerActivity
 import dagger.Module
 import dagger.Provides
 

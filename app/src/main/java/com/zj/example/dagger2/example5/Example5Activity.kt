@@ -16,10 +16,11 @@ import javax.inject.Inject
  * Created by zhengjiong
  * date: 2017/10/15 21:01
  */
-
-
 class Example5Activity : AppCompatActivity() {
 
+    /**
+     * activity通过MainComponent中的ActivityModule注入
+     */
     @Inject
     lateinit var activity: Activity
 

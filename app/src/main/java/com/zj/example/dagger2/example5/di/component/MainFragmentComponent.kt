@@ -2,7 +2,8 @@ package com.zj.example.dagger2.example5.di.component
 
 import com.zj.example.dagger2.example5.Example5Fragment
 import com.zj.example.dagger2.example5.contract.Example5Contract
-import com.zj.example.dagger2.example5.di.module.MainFragmentModule
+import dagger.Module
+import dagger.Provides
 import dagger.Subcomponent
 
 /**
@@ -11,8 +12,17 @@ import dagger.Subcomponent
  * @author 郑炯
  */
 
-//@PerActivity 加了会编译不通过
 @Subcomponent(modules = arrayOf(MainFragmentModule::class))
 interface MainFragmentComponent {
     fun inject(example5Fragment: Example5Fragment)
+}
+
+@Module
+class MainFragmentModule(val view: Example5Contract.View) {
+
+    @Provides
+    fun provideView(): Example5Contract.View = view
+
+    /*@Provides
+    fun provideX():Long = 1L*/
 }

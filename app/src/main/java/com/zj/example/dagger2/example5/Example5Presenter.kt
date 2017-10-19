@@ -8,12 +8,11 @@ import javax.inject.Inject
  * Created by zhengjiong
  * date: 2017/10/15 21:09
  */
-class Example5Presenter @Inject constructor(val userModle: UserModle, val view:Example5Contract.View) : Example5Contract.Presenter {
-    //val view: Example5Contract.View,
+class Example5Presenter @Inject constructor(val userModle: UserModle, val view: Example5Contract.View) : Example5Contract.Presenter {
 
     override fun loadData() {
         val user = userModle.getUser()
-
+        view.setUsername(user.username)
     }
 
 }

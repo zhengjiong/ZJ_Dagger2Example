@@ -5,13 +5,11 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.zj.example.dagger2.App
 import com.zj.example.dagger2.R
 import com.zj.example.dagger2.example5.bean.MultiConstruct
 import com.zj.example.dagger2.example5.contract.Example5Contract
-import com.zj.example.dagger2.example5.di.component.DaggerMainComponent
 import com.zj.example.dagger2.example5.di.component.MainFragmentComponent
-import com.zj.example.dagger2.example5.di.module.ActivityModule
+import com.zj.example.dagger2.example5.di.component.MainFragmentModule
 import kotlinx.android.synthetic.main.fragment_example5_layout.*
 import javax.inject.Inject
 
@@ -20,8 +18,6 @@ import javax.inject.Inject
  * CreateTime: 17/10/16  09:52
  * @author zhengjiong
  */
-
-
 class Example5Fragment : Fragment(), Example5Contract.View {
 
     @Inject
@@ -72,7 +68,7 @@ class Example5Fragment : Fragment(), Example5Contract.View {
                 .build()
                 .inject(this)*/
 
-        mainFragmentComponent = (activity as Example5Activity).mainComponent.plusMainFragmentComponent()
+        mainFragmentComponent = (getActivity() as Example5Activity).getComponent().plusMainFragmentComponent(MainFragmentModule(this))
 
         /**
          * 注入toastUtil

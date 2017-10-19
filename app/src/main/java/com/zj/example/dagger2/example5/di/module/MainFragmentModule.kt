@@ -11,6 +11,7 @@ import dagger.Provides
  * Created by zhengjiong
  * date: 2017/10/17 22:13
  */
+/*
 @Module
 class MainFragmentModule(val view: Example5Contract.View) {
 
@@ -19,4 +20,4 @@ class MainFragmentModule(val view: Example5Contract.View) {
 
     @Provides
     fun provideX():Long = 1L
-}
+}*/
