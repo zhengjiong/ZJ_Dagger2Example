@@ -4,8 +4,8 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.zj.example.dagger2.R
 import com.zj.example.dagger2.example6.bean.Fruit
-import com.zj.example.dagger2.example6.di.component.DaggerFruitComponent
 import javax.inject.Inject
+import javax.inject.Named
 
 /**
  *
@@ -15,14 +15,14 @@ import javax.inject.Inject
 
 class Example6Activity : AppCompatActivity() {
 
-    @Inject
-    lateinit var apple: Fruit
+    @Inject @Named("zj") lateinit var apple: Fruit
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_example6_layout)
 
 
-        DaggerFruitComponent.create().inject(this)
+        //DaggerFruitComponent.create().inject(this)
+        println(apple.color)
     }
 }

@@ -1,11 +1,10 @@
 package com.zj.example.dagger2.example6.di.module
 
-import android.graphics.Color
 import com.zj.example.dagger2.example6.bean.Apple
-import com.zj.example.dagger2.example6.bean.Fruit
 import com.zj.example.dagger2.example6.bean.Size
 import dagger.Module
 import dagger.Provides
+import javax.inject.Named
 
 /**
  *
@@ -15,10 +14,9 @@ import dagger.Provides
 
 @Module
 class FruitModule {
+    @Provides @Named("zj") fun provideAApple() = Apple(1, Size.BIG)
 
-    @Provides
-    fun provideApple(color:Int):Fruit = Apple(color, Size.BIG)
+    @Provides @Named("zjj") fun provideBApple() = Apple(2, Size.BIG)
 
-    @Provides
-    fun provideRedColor() = Color.RED
+
 }
