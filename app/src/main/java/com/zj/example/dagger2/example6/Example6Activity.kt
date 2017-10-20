@@ -15,7 +15,9 @@ import javax.inject.Named
 
 class Example6Activity : AppCompatActivity() {
 
-    @Inject @Named("zj") lateinit var apple: Fruit
+    //@Named("apple")
+    @Inject
+    lateinit var apple: Fruit
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
