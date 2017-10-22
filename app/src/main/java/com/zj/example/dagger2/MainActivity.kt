@@ -21,6 +21,17 @@ import com.zj.example.dagger2.example6.Example6JavaActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 /**
+ *
+ * Component定义方法的规则:
+ *
+ * 1）Component的方法输入参数一般只有一个，对应了需要注入的Container。有输入参数返回值类型就是void
+ * 2）Component的方法可以没有输入参数，但是就必须有返回值：
+ *      Step1：返回的实例会先从事先定义的Module中查找，如果找不到跳到Step2
+ *      Step2 : 使用该类带@Inject的构造器来生成返回的实例，并同时也会递归注入构造器参数以及带@Inject的成员变量。
+ * 3 ) 假设ComponentA依赖ComponentB，B必须定义带返回值的方法来提供A缺少的依赖
+ *
+ *
+ * 查找注入的变量规则:
  *  步骤1：查找Module中是否存在创建该类的方法。
  *  步骤2：若存在创建类方法，查看该方法是否存在参数
  *      步骤2.1：若存在参数，则按从**步骤1**开始依次初始化每个参数
