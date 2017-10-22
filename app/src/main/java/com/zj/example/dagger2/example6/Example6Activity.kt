@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import com.zj.example.dagger2.R
 import com.zj.example.dagger2.example6.bean.Fruit
 import com.zj.example.dagger2.example6.di.component.DaggerFruitComponent
+import com.zj.example.dagger2.example6.di.qualifier.IntName
 import javax.inject.Inject
 import javax.inject.Named
 
@@ -25,6 +26,13 @@ class Example6Activity : AppCompatActivity() {
 
     @field:[Inject Named("banana")]
     lateinit var banana: Fruit
+
+    /**
+     * 如果觉得@Named只能用字符串区分不满足需求，也可以自定义类似@Named的注解，
+     * 使用元注解@Qualifier可以实现这种注解，比如实现一个用int类型区分的@IntName
+     */
+    @field:[Inject IntName(9)]
+    lateinit var orange: Fruit
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

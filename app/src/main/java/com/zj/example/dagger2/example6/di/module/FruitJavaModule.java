@@ -2,7 +2,9 @@ package com.zj.example.dagger2.example6.di.module;
 
 import com.zj.example.dagger2.example6.bean.Apple;
 import com.zj.example.dagger2.example6.bean.Fruit;
+import com.zj.example.dagger2.example6.bean.Orange;
 import com.zj.example.dagger2.example6.bean.Size;
+import com.zj.example.dagger2.example6.di.qualifier.JavaIntName;
 
 import javax.inject.Named;
 
@@ -28,4 +30,9 @@ public class FruitJavaModule {
         return new Apple("yellow", Size.BIG);
     }
 
+    @Provides
+    @JavaIntName(9)
+    Fruit provideOrange(){
+        return new Orange("orange", Size.BIG);
+    }
 }
