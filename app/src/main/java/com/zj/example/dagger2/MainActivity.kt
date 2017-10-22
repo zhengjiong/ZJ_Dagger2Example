@@ -17,6 +17,7 @@ import com.zj.example.dagger2.example3.Example3Activity
 import com.zj.example.dagger2.example4.Example4Activity
 import com.zj.example.dagger2.example5.Example5Activity
 import com.zj.example.dagger2.example6.Example6Activity
+import com.zj.example.dagger2.example6.Example6JavaActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 /**
@@ -46,7 +47,8 @@ class MainActivity : AppCompatActivity() {
                 Item("example3-component依赖另一个component", Example3Activity::class.java),
                 Item("example4-构造函数的参数也注入", Example4Activity::class.java),
                 Item("example5-综合练习", Example5Activity::class.java),
-                Item("example6-综合练习", Example6Activity::class.java)
+                Item("example6-@Named-kotlin", Example6Activity::class.java),
+                Item("example6-@Named-java", Example6JavaActivity::class.java)
         ))
     }
 

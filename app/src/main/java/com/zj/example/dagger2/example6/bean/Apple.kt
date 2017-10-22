@@ -6,6 +6,6 @@ package com.zj.example.dagger2.example6.bean
  * @author 郑炯
  */
 
-class Apple(color:Int, size: Size) : Fruit(color, size) {
+class Apple(color: String, size: Size) : Fruit(color, size) {
 
 }

@@ -1,6 +1,7 @@
 package com.zj.example.dagger2.example6.di.component
 
 import com.zj.example.dagger2.example6.Example6Activity
+import com.zj.example.dagger2.example6.Example6JavaActivity
 import com.zj.example.dagger2.example6.di.module.FruitModule
 import dagger.Component
 
@@ -11,6 +12,7 @@ import dagger.Component
  */
 
 @Component(modules = arrayOf(FruitModule::class))
-interface FruitComponent{
-    fun inject(activity:Example6Activity)
+interface FruitComponent {
+    fun inject(activity: Example6Activity)
+    fun inject(activity: Example6JavaActivity)
 }

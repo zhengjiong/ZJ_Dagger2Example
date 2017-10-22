@@ -17,14 +17,16 @@ import javax.inject.Named
 @Module
 class FruitModule {
 
-    //@Named("apple")
     @Provides
-    fun provideAApple():Fruit = Apple(1, Size.BIG)
+    @Named("apple")
+    internal fun provideApple(): Fruit {
+        return Apple("red", Size.BIG)
+    }
 
-
-    //@Named("banana")
-    /*@Provides
-    fun provideBApple():Fruit = Banana(2, Size.BIG)*/
-
+    @Provides
+    @Named("banana")
+    internal fun provideBanana(): Fruit {
+        return Banana("yellow", Size.BIG)
+    }
 
 }
