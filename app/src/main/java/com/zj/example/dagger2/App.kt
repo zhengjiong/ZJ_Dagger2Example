@@ -10,7 +10,7 @@ import com.zj.example.dagger2.example5.di.module.AppModule
  * date: 2017/10/15 21:01
  */
 
-class App : Application() {
+open class App : Application() {
 
     lateinit var mAppComponent: AppComponent
 

@@ -18,6 +18,8 @@ import com.zj.example.dagger2.example4.Example4Activity
 import com.zj.example.dagger2.example5.Example5Activity
 import com.zj.example.dagger2.example6.Example6Activity
 import com.zj.example.dagger2.example6.Example6JavaActivity
+import com.zj.example.dagger2.example7.Example7Activity
+import com.zj.example.dagger2.example8.Example8Activity
 import kotlinx.android.synthetic.main.activity_main.*
 
 /**
@@ -56,9 +58,11 @@ class MainActivity : AppCompatActivity() {
                 Item("example2-如何实例化一个Component", Example2Activity::class.java),
                 Item("example3-component依赖另一个component", Example3Activity::class.java),
                 Item("example4-构造函数的参数也注入", Example4Activity::class.java),
-                Item("example5-综合练习", Example5Activity::class.java),
+                Item("example5-SubComponent", Example5Activity::class.java),
                 Item("example6-@Named-kotlin", Example6Activity::class.java),
-                Item("example6-@Named-java", Example6JavaActivity::class.java)
+                Item("example6-@Named-java", Example6JavaActivity::class.java),
+                Item("example7-Singleton单例的使用", Example7Activity::class.java),
+                Item("example87-自定义Scope", Example8Activity::class.java)
         ))
     }
 
