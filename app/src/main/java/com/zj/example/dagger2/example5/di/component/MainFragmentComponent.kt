@@ -12,6 +12,7 @@ import dagger.Subcomponent
  * @author 郑炯
  */
 
+//2.注意子Component的Scope范围应该小于父Component
 @Subcomponent(modules = arrayOf(MainFragmentModule::class))
 interface MainFragmentComponent {
     fun inject(example5Fragment: Example5Fragment)
