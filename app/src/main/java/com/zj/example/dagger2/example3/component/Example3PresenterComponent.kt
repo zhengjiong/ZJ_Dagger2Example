@@ -8,7 +8,7 @@ import dagger.Component
  *
  * CreateTime: 17/10/10  17:17
  * @author 郑炯
- */
+*/
 
 @Component(modules = arrayOf(Example3PresenterModule::class), dependencies = arrayOf(Example3OkHttpComponent::class))
 interface Example3PresenterComponent {

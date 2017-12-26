@@ -19,5 +19,8 @@ import dagger.Component
 @Component(modules = arrayOf(Example1ActivityModule::class))
 interface Example1ActivityComponent {
     fun inject(activity: Example1Activity)
+
+    //这里其实可以不提供这个方法, Example1Activity和Example1Presenter也可以注入该对象,
+    //提供这个方法是为了Example1Activity第43行代码使用!
     fun getUser(): User
 }
