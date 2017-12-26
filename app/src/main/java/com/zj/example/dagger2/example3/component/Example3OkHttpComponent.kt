@@ -17,7 +17,7 @@ interface Example3OkHttpComponent {
     fun getRetrofit(): Retrofit
 
     /**
-     * 如果OkHttpClient中想要注入OkHttpClient对象, 这里必须要加上这个方法才行
+     * 如果Example3Activity中想要注入OkHttpClient对象, 这里必须要加上这个方法才行
      */
     //fun getOkHttpClient(): OkHttpClient
 
