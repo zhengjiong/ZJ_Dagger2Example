@@ -1,10 +1,12 @@
 package com.zj.example.dagger2.example7
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.zj.example.dagger2.R
 import com.zj.example.dagger2.example7.bean.Machine
 import com.zj.example.dagger2.example7.di.component.DaggerExample7FruitComponent
+import kotlinx.android.synthetic.main.activity_example7_layout.*
 import javax.inject.Inject
 
 /**
@@ -33,5 +35,13 @@ class Example7Activity : AppCompatActivity() {
         println("${fruitJuice1.name} | hashCode=${fruitJuice1.hashCode()}")
         println("${fruitJuice2.name} | hashCode=${fruitJuice2.hashCode()}")
         println("hashCode一样表示是同一个对象, 单例成功!")
+
+
+        button.setOnClickListener {
+            //这样重新启动一个Example7Activity之后, 因为DaggerExample7FruitComponent又重新build, 就会又重新升一个对象,
+            //所以第二个Example7Activity中的变量和第一次启动的变量已经不是同一个对象了
+            //所以要达到单例的效果因为把component放到application中
+            startActivity(Intent(this, Example7Activity::class.java))
+        }
     }
 }

@@ -13,13 +13,11 @@ import javax.inject.Singleton
  */
 
 /**
- * 这里加上@Singleton后如果, AppModule中相应的方法不加@Singleton,编译是不会报错的,
- * 但是AppModule中的方法如果加了@Singletion,这里的AppComponent不加@Singleton的话,
- * 编译就会报错
+ * AppComponet作为dependencies的时候是不能添加@Singleton的, 原因不明!
  */
-//@Singleton
 @Component(modules = arrayOf(AppModule::class))
 interface AppComponent {
+    //AppComponet作为MainComponent的dependencies, 所以这里需要提供这3个方法
     fun getContext(): Context
     fun getNavigator(): Navigator
     fun getToastUtil(): ToastUtil
