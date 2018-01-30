@@ -11,6 +11,9 @@ import javax.inject.Singleton
  * @author 郑炯
  */
 
+/**
+ * 这里标记Singleton, 是因为ApiModule有方法使用了Singleton
+ */
 @Singleton
 @Component(modules = arrayOf(ApiModule::class))
 interface Example2ApiComponent {

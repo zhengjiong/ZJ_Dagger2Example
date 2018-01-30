@@ -25,6 +25,6 @@ class Example2Activity : AppCompatActivity() {
                 .apiModule(ApiModule())
                 .build()
 
-
+        apiComponent.getRetrofit()
     }
 }
