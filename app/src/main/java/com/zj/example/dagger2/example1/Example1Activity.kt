@@ -35,12 +35,13 @@ class Example1Activity : AppCompatActivity() {
          *
          * 好了，到此为止，我们已经使用Dagger2形成了关联，我们还需要注入Presenter。在Activity中：@Inject Example1Presenter presenter;
          */
-        //注入DaggerPresenter
         var activityComponent = DaggerExample1ActivityComponent.builder()
                 .example1ActivityModule(Example1ActivityModule(this))
                 .build()
 
         activityComponent.getUser()
+
+        //注入DaggerPresenter
         activityComponent.inject(this)
 
         presenter.showUsername()
