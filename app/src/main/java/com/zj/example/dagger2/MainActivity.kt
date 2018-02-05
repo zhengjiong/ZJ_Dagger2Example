@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity() {
                 Item("example6-@Named-java", Example6JavaActivity::class.java),
                 Item("example7-Singleton单例的使用", Example7Activity::class.java),
                 Item("example8-自定义Scope", Example8Activity::class.java),
-                Item("example8-Lazy Provider", Example9Activity::class.java)
+                Item("example9-Lazy Provider", Example9Activity::class.java)
         ))
     }
 
