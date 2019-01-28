@@ -16,7 +16,7 @@ interface Example10PresenterComponent {
 
     /**
      * 重要:
-     * 1.modules = Example10PresenterModule::class中方法需要的变量, 可以在Example10OkHttpModule中提供的话,
+     * 1.modules = Example10PresenterModule::class中方法需要的变量, 可以在OkHttpModule中提供的话,
      * 也是可以编译通过的, 比如说Example10PresenterModule中的retrofit变量是OkHttpModule提供的
      */
     fun inject(activity: Example10Activity)
