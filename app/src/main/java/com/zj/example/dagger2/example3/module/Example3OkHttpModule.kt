@@ -16,15 +16,10 @@ import java.util.concurrent.TimeUnit
  */
 
 @Module
-class Example3OkHttpModule(val activity: Example3Activity) {
+class Example3OkHttpModule() {
 
     @Provides
     fun provideDog(): Dog = Dog("金金")
-
-    @Provides
-    fun provideActivity(): Example3Activity {
-        return activity
-    }
 
     @Provides
     fun provideOkHttpClient(): OkHttpClient {

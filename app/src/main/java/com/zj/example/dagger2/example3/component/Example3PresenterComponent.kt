@@ -10,7 +10,7 @@ import dagger.Component
  * @author 郑炯
 */
 
-@Component(modules = arrayOf(Example3PresenterModule::class), dependencies = arrayOf(Example3OkHttpComponent::class))
+@Component(modules = [Example3PresenterModule::class], dependencies = [Example3OkHttpComponent::class])
 interface Example3PresenterComponent {
 
     /**

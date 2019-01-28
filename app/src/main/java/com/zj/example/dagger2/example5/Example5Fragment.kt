@@ -42,7 +42,7 @@ class Example5Fragment : Fragment(), Example5Contract.View {
         tvInfo.text = username
     }
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater!!.inflate(R.layout.fragment_example5_layout, container, false)
         var btnShowToast = view.findViewById<View>(R.id.btnShowToast)
         btnShowToast.setOnClickListener {

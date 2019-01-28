@@ -48,10 +48,10 @@ class Example3Activity : AppCompatActivity() {
         setContentView(R.layout.activity_example3_layout)
 
         //生成一个Example3OkHttpModule对象提供给下面的注入对象
-        val okHttpComponent: Example3OkHttpComponent = DaggerExample3OkHttpComponent.builder()
-                .example3OkHttpModule(Example3OkHttpModule(this))
-                .build()
-
+        /*val okHttpComponent: Example3OkHttpComponent = DaggerExample3OkHttpComponent.builder()
+                .example3OkHttpModule(Example3OkHttpModule())
+                .build()*/
+        val okHttpComponent:Example3OkHttpComponent = DaggerExample3OkHttpComponent.create()
         val component: Example3PresenterComponent = DaggerExample3PresenterComponent.builder()
                 .example3PresenterModule(Example3PresenterModule(this, Cat("黑娃")))
                 .example3OkHttpComponent(okHttpComponent)//这里加上后,就可以注入Example3OkHttpComponent中提供的对象
@@ -61,13 +61,13 @@ class Example3Activity : AppCompatActivity() {
 
 
         presenter.sayHello()
-        retrofit?.let {
+        retrofit.let {
             Toast.makeText(this, "retrofit注入成功", Toast.LENGTH_SHORT).show()
         }
 
-        println(cat?.name)
+        println(cat.name)
 
-        println(dog?.name)
+        println(dog.name)
 
     }
 
