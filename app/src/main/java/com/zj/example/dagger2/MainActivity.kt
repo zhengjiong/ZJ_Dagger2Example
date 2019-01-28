@@ -21,6 +21,7 @@ import com.zj.example.dagger2.example6.Example6JavaActivity
 import com.zj.example.dagger2.example7.Example7Activity
 import com.zj.example.dagger2.example8.Example8Activity
 import com.zj.example.dagger2.example9.Example9Activity
+import com.zj.example.dagger2.example10.Example10Activity
 import kotlinx.android.synthetic.main.activity_main.*
 
 /**
@@ -64,7 +65,8 @@ class MainActivity : AppCompatActivity() {
                 Item("example6-@Named-java", Example6JavaActivity::class.java),
                 Item("example7-Singleton单例的使用", Example7Activity::class.java),
                 Item("example8-自定义Scope", Example8Activity::class.java),
-                Item("example9-Lazy Provider", Example9Activity::class.java)
+                Item("example9-Lazy Provider", Example9Activity::class.java),
+                Item("example10-include", Example10Activity::class.java)
         ))
     }
 
