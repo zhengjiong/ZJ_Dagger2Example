@@ -12,6 +12,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import com.zj.example.dagger2.example1.Example1Activity
+import com.zj.example.dagger2.example10.Example10Activity
+import com.zj.example.dagger2.example11.Example11Activity
+import com.zj.example.dagger2.example12.Example12Activity
+import com.zj.example.dagger2.example13.Example13Activity
+import com.zj.example.dagger2.example15.Example15Activity
 import com.zj.example.dagger2.example2.Example2Activity
 import com.zj.example.dagger2.example3.Example3Activity
 import com.zj.example.dagger2.example4.Example4Activity
@@ -21,9 +26,6 @@ import com.zj.example.dagger2.example6.Example6JavaActivity
 import com.zj.example.dagger2.example7.Example7Activity
 import com.zj.example.dagger2.example8.Example8Activity
 import com.zj.example.dagger2.example9.Example9Activity
-import com.zj.example.dagger2.example10.Example10Activity
-import com.zj.example.dagger2.example11.Example11Activity
-import com.zj.example.dagger2.example12.Example12Activity
 import kotlinx.android.synthetic.main.activity_main.*
 
 /**
@@ -70,7 +72,9 @@ class MainActivity : AppCompatActivity() {
                 Item("example9-Lazy Provider", Example9Activity::class.java),
                 Item("example10-一个module依赖另外一个module", Example10Activity::class.java),
                 Item("example11-module-include", Example11Activity::class.java),
-                Item("example12-dagger.android", Example12Activity::class.java)
+                Item("example12-intoSet多个元素注入1", Example12Activity::class.java),
+                Item("example12-intoSet多个元素注入2-特定Set注入", Example13Activity::class.java),
+                Item("example15-dagger.android", Example15Activity::class.java)
         ))
     }
 

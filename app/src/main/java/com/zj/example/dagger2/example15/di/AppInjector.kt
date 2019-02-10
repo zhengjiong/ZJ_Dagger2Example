@@ -1,6 +1,6 @@
-package com.zj.example.dagger2.example12.di
+package com.zj.example.dagger2.example15.di
 
-import com.zj.example.dagger2.example12.App2
+import com.zj.example.dagger2.example15.App2
 
 /**
  *
@@ -10,6 +10,6 @@ import com.zj.example.dagger2.example12.App2
  */
 object AppInjector {
     fun init(app: App2) {
-        Daggerappcom
+        //Daggerappcom
     }
 }

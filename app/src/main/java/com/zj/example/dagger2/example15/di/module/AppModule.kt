@@ -1,4 +1,4 @@
-package com.zj.example.dagger2.example12.di.module
+package com.zj.example.dagger2.example15.di.module
 
 import dagger.Module
 import dagger.Provides
