@@ -1,4 +1,4 @@
-package com.zj.example.dagger2.example15
+package com.zj.example.dagger2.example20
 
 import android.app.Activity
 import android.app.Application

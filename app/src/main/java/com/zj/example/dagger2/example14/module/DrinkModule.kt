@@ -15,6 +15,15 @@ import dagger.multibindings.StringKey
 @Module
 class DrinkModule {
 
+    /**
+     * dagger.multibindings中的提供了一套标准的注解：
+
+    ClassKey
+    IntKey
+    LongKey
+    StringKey
+
+     */
     @Provides
     @IntoMap
     @StringKey("A")

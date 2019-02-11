@@ -1,4 +1,4 @@
-package com.zj.example.dagger2.example15.di.component
+package com.zj.example.dagger2.example20.di.component
 
 /**
  *

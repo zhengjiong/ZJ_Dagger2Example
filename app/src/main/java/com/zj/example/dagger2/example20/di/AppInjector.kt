@@ -1,6 +1,6 @@
-package com.zj.example.dagger2.example15.di
+package com.zj.example.dagger2.example20.di
 
-import com.zj.example.dagger2.example15.App2
+import com.zj.example.dagger2.example20.App2
 
 /**
  *
