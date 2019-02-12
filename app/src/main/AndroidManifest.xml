@@ -36,6 +36,8 @@
         <activity android:name=".example15.Example15Activity" />
         <activity android:name=".example16.Example16Activity" />
         <activity android:name=".example17.Example17Activity" />
+        <activity android:name=".example18.Example18Activity" />
+        <activity android:name=".example19.Example19Activity" />
     </application>
 
 </manifest>

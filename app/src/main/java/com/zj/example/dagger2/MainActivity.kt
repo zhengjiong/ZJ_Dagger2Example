@@ -20,6 +20,8 @@ import com.zj.example.dagger2.example14.Example14Activity
 import com.zj.example.dagger2.example15.Example15Activity
 import com.zj.example.dagger2.example16.Example16Activity
 import com.zj.example.dagger2.example17.Example17Activity
+import com.zj.example.dagger2.example18.Example18Activity
+import com.zj.example.dagger2.example19.Example19Activity
 import com.zj.example.dagger2.example20.Example20Activity
 import com.zj.example.dagger2.example2.Example2Activity
 import com.zj.example.dagger2.example3.Example3Activity
@@ -82,6 +84,8 @@ class MainActivity : AppCompatActivity() {
                 Item("example15-intoMap-自定义Key", Example15Activity::class.java),
                 Item("example16-intoMap-Key由多个数据类型的成员组成-该example因为问题没有完成", Example16Activity::class.java),
                 Item("example17-binds", Example17Activity::class.java),
+                Item("example18-SubComponent第二种用法-1", Example18Activity::class.java),
+                Item("example19-SubComponent第二种用法-2", Example19Activity::class.java),
                 Item("example20-dagger.android", Example20Activity::class.java)
         ))
     }
